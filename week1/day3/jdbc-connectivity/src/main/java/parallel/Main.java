@@ -8,7 +8,7 @@ public class Main {
     public void withStream() {
         IntStream
                 .of(1,7,4,3,6,8)
-                .parallel()
+                .sequential()
                 .filter( el -> el > 10 )
 
                 .forEach( el -> System.out.println(el));
