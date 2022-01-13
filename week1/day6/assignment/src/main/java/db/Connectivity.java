@@ -1,6 +1,8 @@
 package db;
 
 
+import com.mysql.cj.jdbc.Driver;
+
 import java.sql.*;
 import java.util.Properties;
 import java.util.logging.Logger;
@@ -48,7 +50,7 @@ public class Connectivity {
         }; // initialize the mysql driver
 
         connection = DriverManager.getConnection(
-                "jdbc:mysql://localhost:3306/week1_case_study_db",
+                "jdbc:mysql://localhost:3306/bank_account",
                 "root",
                 "password"
         ); // trying to make a connectivity
