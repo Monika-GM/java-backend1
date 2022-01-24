@@ -6,10 +6,13 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+@Repository
 public interface BankRepository extends JpaRepository<BankAccount, Long> {
+
     // withdraw logic below is wrongly implemented, you need to deduct given amount from existing amount
     // and set resulting amount as balance.
 
@@ -21,6 +24,4 @@ public interface BankRepository extends JpaRepository<BankAccount, Long> {
     List<BankAccount> findByAcHldNmStartingWith(String prefix);
 
     List<BankAccount> findByStatusTrue();
-
-
 }

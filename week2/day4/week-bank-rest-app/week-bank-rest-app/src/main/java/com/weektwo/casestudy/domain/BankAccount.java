@@ -1,14 +1,12 @@
 package com.weektwo.casestudy.domain;
 
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.sql.Date;
-@Entity
 
+@Entity
 public class BankAccount {
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long acNum; // ac_num
@@ -56,5 +54,4 @@ public class BankAccount {
     public void setAcCrDt(Date acCrDt) {
         this.acCrDt = acCrDt;
     }
-
 }
